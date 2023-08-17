@@ -8,5 +8,5 @@ router.get("/api/hello", function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
-app.use('/.netlify/functions/api', router);
+app.use('/', router);
 module.exports.handler = serverless(app);
