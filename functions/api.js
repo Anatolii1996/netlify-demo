@@ -3,6 +3,9 @@ const serverless = require('serverless-http');
 const app = express();
 const router = express.Router();
 
+const cors = require('cors');
+app.use(cors({ optionsSuccessStatus: 200 }));
+
 //showing demo records
 router.get("/api/hello", function (req, res) {
   res.json({ greeting: 'hello API' });
